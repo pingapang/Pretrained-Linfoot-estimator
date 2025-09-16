@@ -126,18 +126,18 @@ makImage <- function(data, nbin = 50, enlargePoints = FALSE) {
   return(u)
 }
 
-# simulate a dataset
-library(MASS)
-library(reticulate)
-require(tidyverse)
-correlation <- 0.4
-data <- mvrnorm(100, mu = c(0, 0), 
-                Sigma = matrix(c(1, correlation, correlation, 1), 2, 2))
-
-
-# specify the environment you want to use, should have tensorflow etc installed
-use_condaenv("/opt/miniconda3/envs/tensorflow")
-
-# compute linfoot estimate
-linfoot(data)
+# # simulate a dataset
+# library(MASS)
+# library(reticulate)
+# require(tidyverse)
+# correlation <- 0.4
+# data <- mvrnorm(100, mu = c(0, 0), 
+#                 Sigma = matrix(c(1, correlation, correlation, 1), 2, 2))
+# 
+# 
+# # specify the environment you want to use, should have tensorflow etc installed
+# use_condaenv("/opt/miniconda3/envs/tensorflow")
+# 
+# # compute linfoot estimate
+# linfoot(data)
 
